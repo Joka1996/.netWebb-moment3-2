@@ -69,6 +69,7 @@ namespace moment3_2.Controllers
         // GET: Cds/Create
         public IActionResult Create()
         {
+            //ändrat sista till ArtistName istället för ArtistId
             ViewData["ArtistId"] = new SelectList(_context.Artist, "ArtistId", "ArtistName");
             ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserName");
             return View();
