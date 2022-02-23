@@ -1,0 +1,50 @@
+﻿@model IEnumerable<moment3_2.Models.Cd>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CD-samlingen</h1>
+
+<h4>
+    <a asp-action="Create">Create New</a>
+</h4>
+<h4>
+    <a asp-action="Search">Search for Album</a>
+</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Album_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsRented)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Album_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist.ArtistName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsRented)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CdId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CdId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CdId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
