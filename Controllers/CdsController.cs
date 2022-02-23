@@ -21,14 +21,12 @@ namespace moment3_2.Controllers
         }
 
         // GET: Cds
-        //[HttpGet("/Home/cds")]
         public async Task<IActionResult> Index()
         {
             var collectionContext = _context.Cd.Include(c => c.Artist).Include(c => c.User);
-           
             return View(await collectionContext.ToListAsync());
-
         }
+
 
         //sida för att söka
         public async Task<IActionResult> Search(string searchString)
@@ -44,8 +42,9 @@ namespace moment3_2.Controllers
         [HttpPost]
         public string Search(string SearchString, bool notUsed)
         {
-            return "From[HttpPost]Serach: filter on " + SearchString; 
+            return "From[HttpPost]Serach: filter on " + SearchString;
         }
+
 
         // GET: Cds/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -70,7 +69,6 @@ namespace moment3_2.Controllers
         // GET: Cds/Create
         public IActionResult Create()
         {
-            //ändrat sista till ArtistName istället för ArtistId
             ViewData["ArtistId"] = new SelectList(_context.Artist, "ArtistId", "ArtistName");
             ViewData["UserId"] = new SelectList(_context.User, "UserId", "UserName");
             return View();

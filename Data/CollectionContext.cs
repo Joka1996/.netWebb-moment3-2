@@ -5,7 +5,7 @@ namespace moment3_2.Data
 {
     public class CollectionContext : DbContext
     {
-        //constructor mejd inställningar
+        //constructor med inställningar
         public CollectionContext(DbContextOptions<CollectionContext> options) : base(options)
         {
 
@@ -15,6 +15,6 @@ namespace moment3_2.Data
         public DbSet<Artist> Artist { get; set; }
         public DbSet<Cd> Cd { get; set; }
         public DbSet<User> User { get; set; }
-        public DbSet<Rented> Rented { get; set; }
+        //public DbSet<Rented> Rented { get; set; }
     }
 }

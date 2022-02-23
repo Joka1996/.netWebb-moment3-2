@@ -10,10 +10,9 @@ namespace moment3_2.Models
         [Display(Name = "Användarnamn:")]
         public string? UserName { get; set; }
 
-
         //skiva
         public List<Cd>? Cds { get; set; }
-  
+
         public User()
         {
 
