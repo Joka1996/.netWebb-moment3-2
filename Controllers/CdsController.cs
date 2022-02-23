@@ -30,7 +30,8 @@ namespace moment3_2.Controllers
 
         //sida för att söka
         public async Task<IActionResult> Search(string searchString)
-        {
+        {   
+            //query
             var album = from m in _context.Cd select m;
             //Lambda expression
             if (!String.IsNullOrEmpty(searchString))
