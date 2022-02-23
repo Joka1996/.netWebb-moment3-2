@@ -25,12 +25,6 @@ namespace moment3_2.Models
         [Display(Name = "Användare som hyr:")]
         public User? User { get; set; } = null;
 
-        //public int? RentedId { get; set; }
-
-        //public Rented? Rented { get; set; }
-
-
-        //public List<Rented>? Renteds { get; set; }
         public Cd() { }
     }
 }

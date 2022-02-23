@@ -10,18 +10,10 @@ namespace moment3_2.Models
         [Display(Name = "Användarnamn:")]
         public string? UserName { get; set; }
 
-        //public int?  CdId { get; set; }
-        //public Cd? Cd { get; set; }
-
-        //public int CdId { get; set; }
-        //public Cd? Cd { get; set; }
 
         //skiva
         public List<Cd>? Cds { get; set; }
-        //rent
-        //public List<Rented>? Renteds { get; set; }
-        //public int RentedId { get; set; }
-        //public Rented? Rented { get; set; }
+  
         public User()
         {
 
